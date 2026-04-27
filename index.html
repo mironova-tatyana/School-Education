@@ -11,7 +11,7 @@
 
 <body class="bg-[#FFF5F0] flex flex-col h-screen font-outfit">
 
-    <header class="px-2 pt-2 grid gap-y-4">
+    <header class="px-2 pt-2 lg:grid gap-y-4 sm:hidden">
         <div class="border-2 py-2 rounded-xl bg-linear-to-r from-[#FFDECC] to-[#FF9E66] flex items-center justify-center gap-x-4">
             <p class="text-xl">Admission is Open, Grab your seat now
                 <i class="fa fa-arrow-right" aria-hidden="true"></i></p>
@@ -35,27 +35,31 @@
 
 
     <main class="flex-grow container mx-auto py-16 grid gap-y-40">
-        <section class="grid grid-cols-2 gap-x-10 items-center">
-                <div><img src="image/Image (1).jpg" alt="first_display" class="h-[500px] w-full object-cover shadow-2xl rounded-2xl"></div>
-                <div class="grid gap-y-8">
-                    <div>
+        <section class="grid lg:grid-cols-2 gap-x-10 lg:gap-x-10 gap-y-6 items-center">
+                <div>
+                    <img src="image/Image (1).jpg" alt="first_display" class="h-[500px] lg:h-[700px] w-full object-cover shadow-2xl rounded-2xl"></div>
+                <div class="grid gap-y-10 text-center lg:text-left">
+                    <div class="">
                         <span class="font-medium underline text-xl"><b>Welcome to Little Learners Academy</b></span>
                         <h1 class="font-raleway text-4xl font-extrabold"><b>Where Young Minds Blossom and <span class="text-[#FF8D4D]">Dreams Take Flight.</b></span></h1>
                         <p class="font-medium py-6 text-xl">Our kinder garden school provides a nurturing and stimulating environment, fostering a love for learning that lasts a lifetime. Join us as we embark on an exciting educational journey together!</p>
                     </div>
 
-                    <ul class="grid grid-cols-3 p-6 border-2 rounded-2xl shadow-[6px_6px_#FFDECC] bg-[#FFEFE5]">
+                    <ul class="grid lg:grid-cols-3 gap-y-6 p-6 border-2 rounded-2xl shadow-[6px_6px_#FFDECC] bg-[#FFEFE5]">
                         <li class="">
                             <h2 class="text-4xl font-extrabold">+7000</h2>
                             <span class="text-sm">Students Passed Out</span>
+                            <hr class="border sm:mt-4 lg:hidden">
                         </li>
                         <li>
                             <h2 class="text-4xl font-extrabold">+37</h2>
                             <span class="text-sm">Awards & Recognitions</span>
+                            <hr class="border sm:mt-4 lg:hidden">
                         </li>
                         <li>
                             <h2 class="text-4xl font-extrabold">+15</h2>
                             <span class="text-sm">Experience Educators</span> 
+                            <hr class="border sm:mt-4 lg:hidden">
                         </li>
                     </ul>
                 </div>
@@ -66,10 +70,10 @@
   <section class="grid gap-y-16">
             <div class="grid gap-y-6 justify-items-center">
                 <span class="border-2 px-4 py-2 bg-[#FFFFFF] rounded-xl">Children Deserve Bright Future</span>
-                <h2 class="font-raleway font-extrabold text-4xl">Our Benefits</h2>
+                <h2 class="font-extrabold text-5xl">Our Benefits</h2>
                 <p class="text-xl w-2/3 text-center">With a dedicated team of experienced educators, state-of-the-art facilities, and a comprehensive curriculum, we aim to lay a strong foundation for your child's future.</p>
             </div>
-            <div class="grid grid-cols-3 gap-16">
+            <div class="grid lg:grid-cols-3 gap-16">
 
                 <article class="border-2 shadow-[6px_6px_black] pt-10 px-6 pb-6 relative rounded-xl">
                     <div class="grid gap-y-4">
@@ -145,11 +149,11 @@
           <section class="grid gap-y-16">
             <div class="grid gap-y-6 justify-items-center">
                 <span class="border-2 px-4 py-2 bg-[#FFFFFF] rounded-xl">Their Happy Words</span>
-                <h2 class="font-raleway font-extrabold text-4xl">Our Testimonials</h2>
+                <h2 class="font-extrabold text-5xl">Our Testimonials</h2>
                 <p class="text-xl w-2/3 text-center">Our testimonials are heartfelt reflections of the nurturing environment we provide, where children flourish both academically and emotionally.</p>
             </div>
- <div class="relative">           
-            <ul class="grid grid-cols-3 gap-x-8 px-20">
+        <div class="relative">           
+            <ul class="grid lg:grid-cols-3 gap-x-8 px-20">
                 <li class="bg-[#FFFFFF] border-2 rounded-xl shadow-[6px_6px_black] grid gap-y-6 justify-items-center p-6">
                     <div class="grid gap-y-4">
                         <div class="border h-20 w-20 flex justify-center items-center rounded-[100%]">
@@ -219,10 +223,10 @@
         <section class="grid gap-y-16">
             <div class="grid gap-y-6 justify-items-center">
                 <span class="border-2 px-4 py-2 bg-[#FFFFFF] rounded-xl">Solutions For The Doubts</span>
-                <h2 class="font-raleway font-extrabold text-4xl">Frequently Asked Questions</h2>
+                <h2 class="font-extrabold text-5xl">Frequently Asked Questions</h2>
                 <p class="text-xl w-2/3 text-center">Find all the essential information you need in our FAQ section, designed to address the most frequently asked questions and help you make informed decisions for your child's education.</p>
             </div>
-            <ul class="grid grid-cols-2 gap-4">
+            <ul class="grid lg:grid-cols-2 gap-4">
                 <li 
                 x-data="{ open: true }"
                 :class="open ? 'bg-[#FFFFFF] row-span-2' : 'bg-[#FFEFE5]'"
@@ -354,13 +358,13 @@
         </section>
 
         <section class="grid gap-y-16">
-            <div class="grid gap-y-6 justify-items-center">
+            <div class="grid lg:gap-y-6 justify-items-center">
                 <span class="border-2 px-4 py-2 bg-[#FFFFFF] rounded-xl">Explore More</span>
-                <h2 class="font-raleway font-extrabold text-4xl">Navigate through our Pages</h2>
+                <h2 class="font-extrabold text-5xl">Navigate through our Pages</h2>
                 <p class="text-xl w-2/3 text-center">Your gateway to discovering a wealth of valuable information about our kindergarten school, Feel free to explore and learn more about the enriching experiences that await your child at our kindergarten school</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-12">
+            <div class="grid lg:grid-cols-2 gap-12">
                     <article class="bg-[#FFFFFF] border-2 rounded-xl shadow-[6px_6px_black] grid gap-y-6 justify-items-center p-16">
                         <h3 class="text-3xl font-raleway font-extrabold">About Us</h3>
                         <hr class="border w-2/3 border-gray-500">
@@ -394,7 +398,7 @@
 
     <footer class="px-2 pb-6">
         <div class="border-2 rounded-xl bg-linear-to-r shadow-[6px_6px_black] px-20 pt-20 pb-12 bg-[#FFFFFF] grid gap-y-6">
-            <div class="grid grid-cols-[1fr_2fr] gap-x-10">
+            <div class="grid grid-cols-[1fr_2fr] gap-10">
                 <div class="grid gap-y-10">
                     <div class="grid gap-y-6">
                     <a href="" class="flex items-center">
@@ -404,8 +408,8 @@
                     <p class="pr-40">We believe in the power of play to foster creativity, problem-solving skills, and imagination.</p>
                     </div>
                 
-                <ul>
-                    <li class="flex gap-x-6 items-center">
+                <ul class="grid grid-cols-2 gap-y-8 lg:grid-cols-4">
+                    <li class="grid lg:flex gap-x-6 items-center">
                         <div class="h-8 w-8 flex justify-center items-center border border-gray-900 bg-[#FFF5F0]">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </div>
@@ -431,7 +435,7 @@
             
             </div>
             <div>
-                <ul class="grid grid-cols-4 gap-y-4">
+                <ul class="grid grig-cols-2 lg:grid-cols-4 gap-y-4">
                     <li class="grid">
                         <h4 class="font-bold pb-4">Home</h4>
                         <a href="">Features</a>
@@ -463,7 +467,7 @@
                </div> 
             </div>
         <hr>
-            <div class="flex justify-between items-center">
+            <div class="grid lg:flex justify-items-center lg:justify-between lg:items-center gap-y-4">
                 <ul class="flex gap-x-2 text-sm">
                     <li>
                         <a href="">Terms of Service</a>
