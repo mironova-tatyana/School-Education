@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js"></script>
+  <title>School Education</title>
+  <script src="alpin.js"></script>
+</head>
+
+<body class="bg-[#FFF5F0] flex flex-col h-screen font-outfit">
+
+    <header class="px-2 pt-2 lg:grid gap-y-4 sm:hidden">
+        <div class="border-2 py-2 rounded-xl bg-linear-to-r from-[#FFDECC] to-[#FF9E66] flex items-center justify-center gap-x-4">
+            <p class="text-xl">Admission is Open, Grab your seat now
+                <i class="fa fa-arrow-right" aria-hidden="true"></i></p>
+        </div>
+        <div class="flex w-full">
+            <a href="index.html" class="flex items-center bg-[#FF8D4D] py-4 px-2 rounded-l-xl border-l-2 border-y-2">
+                <img src="image/logo.png" alt="" class="h-8">
+                Little Learners
+            </a>
+            <div class="flex-grow border-y-2 h-full"></div>
+            <nav class="flex h-full"
+            x-data="{
+                items: [
+                 { name: 'Home', href: 'index.html' },
+                 { name: 'About Us', href: 'about.html'},
+                 { name: 'Academics', href: '' },
+                 { name: 'Admissions', href: '' },
+                 { name: 'Student Life', href: '' },
+                 { name: 'Contact', href: ''},
+                ]}">
+
+            <template x-for="(item, index) in items">
+                        <a
+                            :href="item.href"
+                            x-text="item.name"
+                            class="flex items-center px-4 border-s-2 border-y-2 h-full  bg-[#FFAE80]">
+                            
+                        </a>
+                        <a
+                            :href="item.href"
+                            x-text="item.name"
+                            class="flex items-center px-4 border-s-2 border-y-2 h-full"
+                            :class="item.active ? 'bg-[#FFEFE5]' : ''">
+                        </a>
+            
+                <!-- <a href="index.html" class="flex items-center px-4 border-s-2 border-y-2 h-full ">Home</a>
+                <a href="about.html" class="flex items-center px-4 border-s-2 border-y-2 h-full bg-[#FFEFE5]">About Us</a>
+                <a href="" class="flex items-center px-4 border-s-2 border-y-2 h-full">Academics</a>
+                <a href="" class="flex items-center px-4 border-s-2 border-y-2 h-full">Admissions</a>
+                <a href="" class="flex items-center px-4 border-s-2 border-y-2 h-full">Student Life</a>
+                <a href="" class="flex items-center px-4 border-s-2 border-r-2 border-y-2 h-full rounded-r-xl bg-[#FFAE80]">Contact</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow"></main>
+
+    <footer class="px-2 pb-6">
+        <div class="border-2 rounded-xl bg-linear-to-r shadow-[6px_6px_black] px-20 pt-20 pb-12 bg-[#FFFFFF] grid gap-y-6">
+            <div class="grid grid-cols-[1fr_2fr] gap-10">
+                <div class="grid gap-y-10">
+                    <div class="grid gap-y-6">
+                    <a href="" class="flex items-center">
+                <img src="image/logo.png" alt="" class="h-8">
+                Little Learners
+            </a>
+                    <p class="pr-40">We believe in the power of play to foster creativity, problem-solving skills, and imagination.</p>
+                    </div>
+                
+                <ul class="grid grid-cols-2 gap-y-8 lg:grid-cols-4">
+                    <li class="grid lg:flex gap-x-6 items-center">
+                        <div class="h-8 w-8 flex justify-center items-center border border-gray-900 bg-[#FFF5F0]">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <span>hello@littlelearners.com</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="flex gap-x-6 items-center">
+                        <div class="h-8 w-8 flex justify-center items-center border border-gray-900 bg-[#FFF5F0]">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <span>+91 91813 23 2309</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="flex gap-x-6 items-center">
+                        <div class="h-8 w-8 flex justify-center items-center border border-gray-900 bg-[#FFF5F0]">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        </div>
+                        <span>Somewhere in the World</span>
+                    </li>
+                </ul>
+            
+            </div>
+            <div>
+                <ul class="grid grig-cols-2 lg:grid-cols-4 gap-y-4">
+                    <li class="grid">
+                        <h4 class="font-bold pb-4">Home</h4>
+                        <a href="">Features</a>
+                        <a href="">Our Testimonials</a>
+                        <a href="">FAQ</a>
+                    </li>
+
+                    <li class="grid">
+                        <h4 class="font-bold pb-4">About Us</h4>
+                        <a href="">Our Mission</a>
+                        <a href="">Our Vission</a>
+                        <a href="">Awards and Recognitions</a>
+                        <a href="">History</a>
+                        <a href="">Teachers</a>
+                    </li>
+
+                    <li class="grid">
+                        <h4 class="font-bold pb-4">Academics</h4>
+                        <a href="">Special Features</a>
+                        <a href="">Gallery</a>
+                    </li>
+
+                    <li class="grid">
+                        <h4 class="font-bold pb-2">Contact Us</h4>
+                        <a href="">Information</a>
+                        <a href="">Map & Direction</a>
+                    </li>
+                </ul>
+               </div> 
+            </div>
+        <hr>
+            <div class="grid lg:flex justify-items-center lg:justify-between lg:items-center gap-y-4">
+                <ul class="flex gap-x-2 text-sm">
+                    <li>
+                        <a href="">Terms of Service</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="">Cookie Policy</a>
+                    </li>
+
+                </ul>
+                <ul>
+                    <li>
+                        <li class="flex gap-x-6 items-center">
+                        <div class="h-10 w-10 flex justify-center items-center border border-gray-900 bg-[#FFDECC] rounded">
+                           <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="h-10 w-10 flex justify-center items-center border border-gray-900 bg-[#FFDECC] rounded">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                        <div class="h-10 w-10 flex justify-center items-center border border-gray-900 bg-[#FFDECC] rounded">
+                            <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                        </div>
+
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        <hr>
+        
+            <div class="container mx-auto text-center">
+                   Copyright © [2023] Little Learners Academy. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
+
